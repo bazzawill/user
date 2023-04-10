@@ -24,7 +24,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>ti"] = { '<cmd>w<bar>TermExec cmd="python -i %:p"<cr>', desc = "run python interactive" },
-    ["<leader>tp"] = { '<cmd>w<bar>TermExec cmd="python %:p"<cr>', desc = "run python" },
+    ["<leader>tP"] = { '<cmd>w<bar>TermExec cmd="python %:p"<cr>', desc = "run python" },
     ["<leader>tr"] = { '<cmd>w<bar>TermExec cmd="%:p"<cr>', desc = "run file" },
   },
   t = {
