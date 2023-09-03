@@ -23,9 +23,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>ti"] = { '<cmd>w<bar>TermExec cmd="python -i %:p"<cr>', desc = "run python interactive" },
+    ["<leader>ti"] = { '<cmd>w<bar>TermExec cmd="bpython -i %:p"<cr>', desc = "run python interactive" },
     ["<leader>tP"] = { '<cmd>w<bar>TermExec cmd="python %:p"<cr>', desc = "run python" },
     ["<leader>tr"] = { '<cmd>w<bar>TermExec cmd="%:p"<cr>', desc = "run file" },
+    ["<leader>tb"] = { '<cmd>TermExec cmd=bpython<cr>', desc = "bpython" },
   },
   t = {
     -- setting a mapping to false will disable it
