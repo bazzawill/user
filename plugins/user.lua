@@ -9,6 +9,7 @@ return {
       })
     end
   },
+  {'ekickx/clipboard-image.nvim'},
   {
     "folke/flash.nvim",
     event = "VeryLazy",
