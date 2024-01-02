@@ -27,6 +27,27 @@ return {
     ["<leader>tP"] = { '<cmd>w<bar>TermExec cmd="python %:p"<cr>', desc = "run python" },
     ["<leader>tr"] = { '<cmd>w<bar>TermExec cmd="%:p"<cr>', desc = "run file" },
     ["<leader>tb"] = { '<cmd>TermExec cmd=bpython<cr>', desc = "bpython" },
+    -- Obsidian
+    ["<leader>,"] = { name = "Notes" },
+    ["<leader>,o"] = { '<cmd>ObsidianOpen<cr>', desc = "Open in Obsidian" },
+    ["<leader>,n"] = {
+      function()
+        vim.ui.input({ prompt = "Note Name"}, function(noteName)
+          vim.cmd{cmd='ObsidianNew', args={noteName}}
+        end)
+      end,
+      desc = "New Note"},
+    ["<leader>,r"] = {
+        function()
+        vim.ui.input({ prompt = "Expression: " }, function(input)
+          -- require("obsidian").Rename (input)
+          vim.cmd{cmd='ObsidianRename ', args=input}
+        end)
+      end,
+      desc = "Rename Note"},
+    ["<leader>,S"] = {'<cmd>ObsidianSearch<cr>', desc = "Search Notes"},
+    ["<leader>,s"] = {'<cmd>ObsidianQuickSwitch<cr>', desc = "Quick Search Notes"},
+    ["<leader>,p"] = {'<cmd>ObsidianPaste<cr>', desc = "Paste Image"},
   },
   t = {
     -- setting a mapping to false will disable it
